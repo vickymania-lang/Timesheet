@@ -39,6 +39,42 @@
         tr:nth-child(even) {
           background-color: #dddddd;
         }
+
+        * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
         </style>
 
 
@@ -57,14 +93,14 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3"><img src="avatar" alt="logo"> <p>company name</p></div>
+                <div style="padding-top: 20px; margin-top: 20px;" class="sidebar-brand-text mx-3"><img src="avatar" alt="logo"> <p>company name</p></div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li style="padding-top: 20px;" class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -73,10 +109,10 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <li class="nav-item active">
+            <li style="padding-top: 20px;" class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Timesheet</span></a>
             </li>
 
             <!-- Heading -->
@@ -159,11 +195,8 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
-                        </li>
-
-                        <
-                            <!-- Dropdown - Messages -->
+                        <!-- Nav Item - Alerts --></li>
+                         <!-- Dropdown - Messages -->
                             <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
@@ -220,8 +253,7 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div> -->
                         <!-- <li class="nav-item dropdown no-arrow"> -->
-                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
@@ -236,103 +268,151 @@
                     <hr>
                     <div  class="input-group">
                         <div class="form-outline">
-                          <h6>Filter By</h6>
+                          <h6 style="display: flex;">Filter By</h6>
                           <input style="margin: 0 30px;" type="search" id="form1" class="form-control" />
                         </div>
                         <div class="form-outline">
                             <!-- <p>Filter By</p> -->
                             <input style="margin: 0 30px;" type="search" id="form1" class="form-control" />
                         </div>
-                        <button type="button" class="btn btn-primary" style="width: 10%; margin: 0 30px;">
+
+                        <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                        <ul id="myUL">
+                            <li><a href="#">Adele</a></li>
+                            <li><a href="#">Agnes</a></li>
+                            <li><a href="#">Billy</a></li>
+                             <li><a href="#">Cindy</a></li>
+                          </ul>
+                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                          <ul id="myUL">
+                              <li><a href="#">Adele</a></li>
+                              <li><a href="#">Agnes</a></li> 
+                              <li><a href="#">Billy</a></li>
+                              <li><a href="#">Bob</a></li> -->
+                           
+                            </ul>
+                           
+
+
+
+
+                        <button type="button" class="btn btn-success" style="width: 10%; margin: 0 30px;">
                             <i class="fas "></i>Filter
                           </button>
-                          <button type="button" class="btn btn-primary" style="width: 10%; margin: 0 30px;">
+                          <button type="button" class="btn btn-success" style="width: 10%; margin: 0 30px;">
                             <i class="fas "></i>Add
                           </button>
                     </div>    
 
-                    <table>
-                        <tr>
-                          <th>Date</th>
-                          <th>Name</th>
-                          <th>Task Category</th>
-                          <th>Sub-Category</th>
-                          <th>Hours</th>
-                          <th></th>
-                        </tr>
-                        <tr>
-                          <td>12/12/2022</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Germany</td>
-                          <td>2.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                          <td>12/12/2022</td>
-                          <td>Francisco Chang</td>
-                          <td>Mexico</td>
-                          <td>Germany</td>
-                          <td>6.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                            <td>12/12/2022</td>
-                          <td>Roland Mendel</td>
-                          <td>Austria</td>
-                          <td>Germany</td>
-                          <td>4.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                            <td>12/12/2022</td>
-                          <td>Helen Bennett</td>
-                          <td>UK</td>
-                          <td>Germany</td>
-                          <td>5.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                            <td>12/12/2022</td>
-                          <td>Yoshi Tannamuri</td>
-                          <td>Canada</td>
-                          <td>Germany</td>
-                          <td>3.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                            <td>12/12/2022</td>
-                          <td>Giovanni Rovelli</td>
-                          <td>Italy</td>
-                          <td>Germany</td>
-                          <td>5.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                          <td>12/12/2022</td>
-                          <td>Giovanni Rovelli</td>
-                          <td>Italy</td>
-                          <td>Germany</td>
-                          <td>4.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
-                        <tr>
-                          <td>12/12/2022</td>
-                          <td>Giovanni Rovelli</td>
-                          <td>Italy</td>
-                          <td>Germany</td>
-                          <td>9.0</td>
-                          <td><i class="fa fa-eye fa-lg"></i></td>
-                        </tr>
+                    <table class="mainTable">
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Task Category</th>
+                                <th>Sub-Category</th>
+                                <th>Hours</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                                <td>2.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                                <td>Germany</td>
+                                <td>6.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Roland Mendel</td>
+                                <td>Austria</td>
+                                <td>Germany</td>
+                                <td>4.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Helen Bennett</td>
+                                <td>UK</td>
+                                <td>Germany</td>
+                                <td>5.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Yoshi Tannamuri</td>
+                                <td>Canada</td>
+                                <td>Germany</td>
+                                <td>3.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Giovanni Rovelli</td>
+                                <td>Italy</td>
+                                <td>Germany</td>
+                                <td>5.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2022</td>
+                                <td>Giovanni Rovelli</td>
+                                <td>Italy</td>
+                                <td>Germany</td>
+                                <td>4.0</td>
+                                <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                    <td>12/12/2022</td>
+                                    <td>Giovanni Rovelli</td>
+                                    <td>Italy</td>
+                                    <td>Germany</td>
+                                    <td>9.0</td>
+                                    <td><i class="fa fa-eye fa-lg"></i></td>
+                            </tr>
+                                
+                            <tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                            </tr>
                       </table>
-                      <hr>
-                      <br>
-                      <hr>
 
                 </section>
 
     <a href="details.html">okay</a>
                     
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
 
     <!-- Bootstrap core JavaScript-->
