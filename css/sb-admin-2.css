@@ -584,6 +584,14 @@ pre code {
   }
 }
 
+
+
+@media (max-width: 400px) {
+  .TableSection {
+    max-width: 400px;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
