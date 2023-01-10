@@ -7,6 +7,44 @@
     <title>details</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        /* .dropbtn {
+ width: 1000px;
+ color: white;
+ padding: 16px;
+ font-size: 16px; */
+ /* border: solid grey; */
+}
+
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #fff;}
+
+
+
+    </style>
+
 </head>
 <body>
     <section>
@@ -20,7 +58,18 @@
                 <input type="text" id="lname" name="lname" value="Task Category"><br><br>
                 <label for="lname">Sub Category</label><br>
                 <input type="text" id="lname" name="lname" value="Sub Category"><br><br>
-                <button style="width: 20%; text-align: center;"" type="submit">Save</button>
+                <label for="lname">Approval</label><br>
+                <div class="dropdown">
+                <input style="cursor: pointer;" class="dropbtn" type="text" id="lname" name="lname" value="Approval"><br><br>
+                    <div class="dropdown-content">
+                      <a href="#">Approved</a>
+                      <a href="#">Pending</a>
+                      <a href="#">Declined</a>
+                    </div>
+                  </div><br>
+
+                <button style="float: left;" style="width: 20%; text-align: center;"" type="submit">Save</button>
+                  
 
             </form> 
 
