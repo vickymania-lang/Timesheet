@@ -8,7 +8,7 @@
 	<meta name="viewport"
 		content="width=device-width,
 				initial-scale=1.0">
-	<title>GeeksForGeeks</title>
+	<title>Admin detail</title>
 	<link rel="stylesheet"
 		href="style.css">
 	<link rel="stylesheet"
@@ -92,24 +92,26 @@
                     }
 
                     .searchbar input {
-                    width: 250px;
+                    width: 200px;
                     height: 42px;
-                    border-radius: 50px 0 0 50px;
+                    border-radius: 50px 50px 50px 50px;
                     background-color: var(--background-color3);
                     padding: 0 20px;
                     font-size: 15px;
                     outline: none;
                     border: none;
+                    position: relative;
+                    right: 80px;
                     }
                     .searchbtn {
-                    width: 50px;
+                    /* width: 30px;
                     height: 42px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     border-radius: 0px 50px 50px 0px;
-                    background-color: var(--secondary-color);
-                    cursor: pointer;
+                    background-color: green;
+                    cursor: pointer; */
                     }
 
                     .message {
@@ -325,10 +327,12 @@
                     }
                     .report-topic-heading,
                     .item1 {
-                    width: 900px;
+                    width: 890px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin-bottom: 10px;
+
                     }
                     .t-op {
                     font-size: 18px;
@@ -371,7 +375,7 @@
 .report-topic-heading,
 .item1,
 .items {
-	width: 400px;
+	width: 3800px;
 }
 }
 
@@ -529,7 +533,8 @@
 	<header>
 
 		<div class="logosec">
-			<div class="logo">Name of Company</div>
+            <img src="image/ctimesheet_logo.png" />
+			<!-- <div class="logo">Name of Company</div> -->
 			<!-- <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
 				class="icn menuicn"
@@ -558,8 +563,10 @@
 			<img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
 					class="dpicn"
-					alt="dp">Victor
+					alt="dp">
 			</div>
+			<h3> Admin</h3>
+
 		</div>
 
 	</header>
@@ -709,6 +716,7 @@
 				<div class="report-body">
 
 					<div class="report-topic-heading">
+                       
                         <h5>Filter By</h5>
                         <div class="searchbar">
                         <input type="text"
@@ -730,15 +738,31 @@
                                 class="icn srchicn"
                                 alt="search-icon"> -->
                         </div>
-                        <input style="width: 50px;" type="button" value="Add"/>
-                        <input style="width: 50px;" type="button" value="Filter"/>
+                        <input style="width: 50px;
+                        height: 42px;
+                        border-radius: 50px 50px 50px 50px;
+                        background-color: var(--background-color3);
+                        padding: 0 10px;
+                        font-size: 15px;
+                        outline: none;
+                        margin:  0 5px;
+                        border: none;" type="button" value="Add"/>
+                        <input style="width: 50px; height: 42px;
+                        border-radius: 50px 50px 50px 50px;
+                        background-color: var(--background-color3);
+                        padding: 0 10px;
+                        font-size: 15px;
+                        outline: none;
+                        border: none;
+                        margin:  0 5px;
+ " type="button" value="Filter"/>
                     
                     </div>
 
 					</div>
 
-                    <table class="mainTable">
-                        <tr>
+                    <!-- <table style="padding: 30px; margin: 30px;" class="mainTable">
+                        <tr style="padding: 30px; margin: 30px;">
                             <th>Date</th>
                             <th>Name</th>
                             <th>Task Category</th>
@@ -821,7 +845,7 @@
                                 <td></td>
                                 </tr>
                         </tr>
-                  </table>
+                  </table> -->
 
             
 
@@ -840,7 +864,7 @@
 							<h3 class="t-op-nextlvl">5/12/2022</h3>
 							<h3 class="t-op-nextlvl">Ken Gowan</h3>
 							<h3 class="t-op-nextlvl">capital_activities</h3>
-							<h3 class="t-op-nextlvl">attend project meeting i supervisor meeting</h3>
+							<h3 class="t-op-nextlvl">attend project meeting i supervisor</h3>
 						    <h3 class="t-op">2.0</h3>
 							<h3><i class="fa fa-eye fa-lg"></i></h3>
 						    
@@ -851,7 +875,7 @@
 							<h3 class="t-op-nextlvl">5/12/2022</h3>
 							<h3 class="t-op-nextlvl">Ken Gowan</h3>
 							<h3 class="t-op-nextlvl">capital_activities</h3>
-							<h3 class="t-op-nextlvl">attend project meeting i supervisor meeting</h3>
+							<h3 class="t-op-nextlvl">attend project meeting i supervisor</h3>
 						    <h3 class="t-op">4.0</h3>
 							<h3><i class="fa fa-eye fa-lg"></i></h3>
 						    
@@ -863,7 +887,7 @@
 							<h3 class="t-op-nextlvl">5/12/2022</h3>
 							<h3 class="t-op-nextlvl">Ken Gowan</h3>
 							<h3 class="t-op-nextlvl">capital_activities</h3>
-							<h3 class="t-op-nextlvl">attend project meeting i supervisor meeting</h3>
+							<h3 class="t-op-nextlvl">attend project meeting i supervisor </h3>
 						    <h3 class="t-op"></h3>
 							<h3><i class="fa fa-eye fa-lg"></i></h3>
 						    
