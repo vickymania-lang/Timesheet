@@ -165,7 +165,7 @@ function filterTable($query)
 					</div>
 
 					<table style="width:100%">
-					<tr>
+					<tr style='text-align: left;'>
 						<th></th>
 						<th>Name</th>
 						<th>Project Name</th>
@@ -173,7 +173,7 @@ function filterTable($query)
      			   </tr>
 
 					<?php while($row = mysqli_fetch_array($search_result)):?>
-							<tr>
+							<tr style='text-align: left;'>
 								<td><div class='avatar'><?php echo substr($row['Name'],0,1);?></div></td>
 								<td><?php echo $row['Name'];?></td>
 								<td><?php echo $row['Project_Name'];?></td>
