@@ -1,5 +1,8 @@
 <?php
 
+
+// $Error = '';
+
 session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'timesheet') or die ('unable to connect');
 
@@ -20,7 +23,10 @@ if (isset($_POST['login'])){
             // echo $Password;
             header('Location: dashboard1.php');
             }else{
-            echo "Invalid Details";
+            // $Error = "Invalid Details";
+            // echo "Invalid Details";
+            header('Location: dashboard.html');
+
         }
 
 
@@ -42,13 +48,15 @@ if (isset($_POST['login'])){
 <body>
     
     <div class="containers">
-        <form method="POST" action="">
+        <form action='' method="POST">
             <div class="imgcontainer">
                 <img src="image/ctimesheet_logo.png" alt="" class="avatar">
             </div>
 
         
             <h2>Login details</h2>
+
+            <p style="color: red; text-align: center;"> <?PHP if (isset($Error)){ echo $Error;} ?></p>
             
 
             <div class="container">
