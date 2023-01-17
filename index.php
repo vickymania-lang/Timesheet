@@ -23,16 +23,27 @@ if (isset($_POST['login'])){
             // echo $Password;
             header('Location: dashboard1.php');
             }else{
-            // $Error = "Invalid Details";
+            $Error = "Invalid Details";
             // echo "Invalid Details";
-            header('Location: dashboard.html');
+            // header('Location: dashboard.html');
 
         }
 
+    }
+    if($Password ==$_SESSION['Password']){
+        // echo $Username;
+        // echo $Password;
+        header('Location: dashboard1.php');
+        }else{
+        $Error = "Invalid Details";
+        // echo "Invalid Details";
+        // header('Location: dashboard.html');
 
     }
-    
+
 }
+
+
 
 ?>
 
