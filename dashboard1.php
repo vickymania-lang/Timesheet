@@ -2,12 +2,12 @@
 
 session_start();
 
-
-
-if(isset($_POST['search']))
+if(isset($_POST))
 {
-    $valueToSearch = $_POST['valueToSearch'];
-    $query = "SELECT * FROM `dashboard` WHERE CONCAT(`Date`, `Name`, `Task_Category`, `Sub_Category`) LIKE '%".$valueToSearch."%'";
+    // $valueToSearch = $_POST['valueToSearch'];
+    // $query = "SELECT * FROM `dashboard` WHERE CONCAT(`Date`) LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `dashboard`";
+
     $search_result = filterTable($query);
     
 }
@@ -23,6 +23,29 @@ function filterTable($query)
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
+
+
+
+
+// if(isset($_POST['search']))
+// {
+//     // $valueToSearch = $_POST['valueToSearch'];
+//     // $query = "SELECT * FROM `dashboard` WHERE CONCAT(`Date`) LIKE '%".$valueToSearch."%'";
+//     $search_result = filterTable($query);
+    
+// }
+//  else {
+//     $query = "SELECT * FROM `dashboard`";
+//     $search_result = filterTable($query);
+// }
+
+// // function to connect and execute the query
+// function filterTable($query)
+// {
+//     $connect = mysqli_connect("localhost", "root", "", "timesheet");
+//     $filter_Result = mysqli_query($connect, $query);
+//     return $filter_Result;
+// }
 
 ?>
 
@@ -53,6 +76,16 @@ function filterTable($query)
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="css/style.css">
 	<style>
 		 table,
@@ -70,9 +103,34 @@ function filterTable($query)
 		th {
 			text-align: left;
 		}
-	</style>
 
- 
+		
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #fff;}
+
+
 
 
     </style>
@@ -84,13 +142,7 @@ function filterTable($query)
 	<header>
 
 		<div class="logosec">
-            <img src="image/cctimesheet_logo.png" />
-			<!-- <div class="logo">Name of Company</div> -->
-			<!-- <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
-				class="icn menuicn"
-				id="menuicn"
-				alt="menu-icon"> -->
+            <img style="width: 170px;" src="image/cctimesheet_logo.png" />
 		</div>
 
 		
@@ -113,31 +165,31 @@ function filterTable($query)
 		<div class="navcontainer">
 			<nav class="nav">
 				<div class="nav-upper-options">
-					<div class="nav-option option1">
+					<div style="background-color: white; border-left: grey;" class="nav-option">
 						<img src="image/dashboard.png"
 							class="nav-img"
 							alt="dashboard">
 						
-							<a style="text-decoration: none; color: white; position: relative; left: -15px;" href="adminSheet1.html">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px;" href="adminSheet1.html">
 						<h3> Dashboard</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="option2 nav-option">
+					<div style="background-color: white;" class="option2 nav-option">
 						<img src="image/cal.png"
 							class="nav-img"
 							alt="articles">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="dashboard1.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="dashboard1.php">
 						<h3> Time</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="nav-option option3">
+					<div style="background-color: white;" class="nav-option option3">
 						<img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
 							class="nav-img"
 							alt="report">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="adminsheetlist.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="adminsheetlist.php">
 						<h3> Admin</h3>
 							</a>
 						
@@ -149,8 +201,7 @@ function filterTable($query)
 		</div>
 		<div class="main">
 
-
-			<div class="report-container">
+			<div style="margin: 10px auto 0px auto;" class="report-container">
 				<div class="report-header">
 					<h1 class="recent-Articles">Timesheet</h1>
 					<!-- <button class="view">View All</button> -->
@@ -163,18 +214,39 @@ function filterTable($query)
                        
                         <!-- <h5>Filter By</h5> -->
 						<div style="display: flex; margin: 20px; padding: 0px 50px">
-							<div style="padding: 0px 50px">
-							<input style="width: 200px;" type="text" name="valueToSearch" placeholder="Value To Search">
+							<div id="filters" class="dropdown" style="padding: 0px 50px">
+							<select style="width: 150px; height: 40px;" name="fetchval" id="fetchval">
+									<option value=""disabled="" selected="" >Select Filter</option>
+									<option value="Daily">Daily</option>
+									<option value="Weekly">Weekly</option>
+									<option value="All">All</option>
+								</select>
+					
+							<!-- <input type="submit" name="search" value="Filter"> -->
+							</div>
+							<div id="filters" style="padding: 0px 50px;" stlye="display; flex;">
+							<select style="width: 150px; height: 40px;" name="fetchval" id="fetchval">
+									<option value="dave"></option>
+									<option value="dave">Monday</option>
+									<option value="pumpernickel">Tuesday</option>
+									<option value="reeses">Wednessday</option>
+									<option value="reeses">Thursday</option>
+									<option value="reeses">Friday</option>
+								</select>
+						
 							<input type="submit" name="search" value="Filter">
 							</div>
-							<div stlye="display; flex;">
-							<input style="width: 200px;" type="text" name="valueToSearch" placeholder="Value To Search">
-							<input type="submit" name="search" value="Filter">
+							<div style="padding: 0px 50px; position: relative; top: -15px;" stlye="display; flex;">
+							<a href="save.php">
+							<button style="width: 60px;" type="button" class="btn btn-primary">Add</button>
+							</a>
 							</div>
 						</div>
+
+						
 					
 
-	<table style="width:100%">
+	<table class="container_table" style="width:100%">
 
 
 		
@@ -190,12 +262,12 @@ function filterTable($query)
 
 		<?php while($row = mysqli_fetch_array($search_result)):?>
                 <tr>
-                    <td><?php echo $row['Date'];?></td>
+                    <td><?php echo $row['date_applied'];?></td>
                     <td><?php echo $row['Name'];?></td>
                     <td><?php echo $row['Task_Category'];?></td>
                     <td><?php echo $row['Sub_Category'];?></td>
                     <td>2.0</td>
-                    <td><i class="fa fa-eye fa-lg"></i></td>
+                    <td><a href="details.php?user_id=<?php echo $row['id']; ?> "><i class="fa fa-eye fa-lg"></i></a></td>
 
                 </tr>
         <?php endwhile;?>
@@ -211,18 +283,44 @@ function filterTable($query)
 			</div>
 		</div>
 	</div>
-    <script>
-        <script>
-let menuicn = document.querySelector(".menuicn");
-let nav = document.querySelector(".navcontainer");
 
-menuicn.addEventListener("click",()=>
-{
-	nav.classList.toggle("navclose");
-})
-</script>
 
-    </script>
+	
+
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fetchval").on('change', function() {
+				var value = $(this).val();
+				// alert(value);
+
+				$.ajax({
+					url: "fetch.php",
+					type: "POST",
+					data: 'request=' + value,
+					beforeSend: function() {
+						$(".container_table").html("<span>working...</span>");
+					},
+					success:function(data){
+						$(".container_table").html(data);
+					}
+					
+				});
+
+			})
+		} );
+
+
+	</script>
+
+					<script>
+			let menuicn = document.querySelector(".menuicn");
+			let nav = document.querySelector(".navcontainer");
+
+			menuicn.addEventListener("click",()=>
+			{
+				nav.classList.toggle("navclose");
+			})
+			
 	<script src="./index.js"></script>
 
 

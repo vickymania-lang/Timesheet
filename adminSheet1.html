@@ -15,6 +15,19 @@
 		href="responsive.css">
         <link rel="stylesheet"
 		href="css/style1.css">
+		<link rel="stylesheet"
+		href="css/style1.css">
+
+		<style>
+			
+			@media only screen and (max-width: 600px) {
+			  .main .report-topic-heading {
+				display: block;
+				
+			  }
+			}
+			</style>
+
 
 </head>
 
@@ -24,13 +37,13 @@
 	<header>
 
 		<div class="logosec">
-            <img src="image/cctimesheet_logo.png"/>
+            <img style="width: 170px;" src="image/cctimesheet_logo.png"/>
 			<!-- <div class="logo">Name of Company</div> -->
-			<img src=
+			<!-- <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
 				class="icn menuicn"
 				id="menuicn"
-				alt="menu-icon">
+				alt="menu-icon"> -->
 		</div>
 
 
@@ -48,10 +61,7 @@
 
 		<div class="message">
 			<div class="circle"></div>
-			<!-- <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
-				class="icn"
-				alt=""> -->
+			
 			<div class="dp">
                 
 			<img src="image/pic.png"
@@ -68,31 +78,31 @@
 		<div class="navcontainer">
 			<nav class="nav">
 				<div class="nav-upper-options">
-					<div class="nav-option option1">
+					<div class="nav-option ">
 						<img src="image/dashboard.png"
 							class="nav-img"
 							alt="dashboard">
 						
-							<a style="text-decoration: none; color: white; position: relative; left: -15px;" href="adminSheet1.html">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px;" href="adminSheet1.html">
 						<h3> Dashboard</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="option2 nav-option">
+					<div style="background-color: white;" class="option2 nav-option">
 						<img src="image/cal.png"
 							class="nav-img"
 							alt="articles">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="dashboard1.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="dashboard1.php">
 						<h3> Time</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="nav-option option3">
+					<div style="background-color: white;" class="nav-option option3">
 						<img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
 							class="nav-img"
 							alt="report">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="adminsheetlist.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="adminsheetlist.php">
 						<h3> Admin</h3>
 							</a>
 						
@@ -102,79 +112,9 @@
 				</div>
 			</nav>
 		</div>
+		
+
 		<div class="main">
-
-
-            <!-- <div class="searchbar">
-			<input type="text"
-				placeholder="Search">
-			<div class="searchbtn">
-			<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-					class="icn srchicn"
-					alt="search-icon">
-			</div>
-		</div>
-
-			<div class="searchbar2">
-				<input type="text"
-					name=""
-					id=""
-					placeholder="Search">
-				<div class="searchbtn">
-				<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-						class="icn srchicn"
-						alt="search-button">
-				</div>
-			</div>
-
-			<div class="box-container">
-
-				<div class="box box1">
-					<div class="text">
-						<h2 class="topic-heading">60.5k</h2>
-						<h2 class="topic">Article Views</h2>
-					</div>
-
-					<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
-						alt="Views">
-				</div>
-
-				<div class="box box2">
-					<div class="text">
-						<h2 class="topic-heading">150</h2>
-						<h2 class="topic">Likes</h2>
-					</div>
-
-					<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png"
-						alt="likes">
-				</div>
-
-				<div class="box box3">
-					<div class="text">
-						<h2 class="topic-heading">320</h2>
-						<h2 class="topic">Comments</h2>
-					</div>
-
-					<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
-						alt="comments">
-				</div>
-
-				<div class="box box4">
-					<div class="text">
-						<h2 class="topic-heading">70</h2>
-						<h2 class="topic">Published</h2>
-					</div>
-
-					<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
-				</div>
-			</div> -->
-
 			<div class="report-container">
 				<div class="report-header">
 					<h1 class="recent-Articles">Dashboard</h1>
@@ -186,36 +126,32 @@
 					<div class="report-topic-heading">
 
 
-                    <div class="searchbar">
-                        <input type="text"
-                            placeholder="Timesheet">
-                        <div class="searchbtn">
-                        <img src=
-            "image/white-removebg-preview.png"
-                                class="icn srchicn"
-                                alt="search-icon">
-                        </div>
-                    </div>
+								<div class="col-sm-12 col-md-6 col-lg-6">
+									<input class="col-sm-12 col-md-6 col-lg-6"  type="text" placeholder="Timesheet">
+									<!-- <div class="searchbtn"> -->
+									<img src= "image/white-removebg-preview.png" class="icn srchicn" alt="search-icon">
+									<!-- </div> -->
+								</div>
 
-                    <div class="searchbar">
-                        <input type="text"
-                            placeholder="Report">
-                        <div class="searchbtn">
-                        <img src=
-            "image/white-removebg-preview.png"
-                                class="icn srchicn"
-                                alt="search-icon">
-                        </div>
-                    </div>
+								<div class="searchbars">
+									<input class="col-sm-12 col-md-6 col-lg-6" type="text" placeholder="Report">
+									<!-- <div class="searchbtn"> -->
+									<img src="image/white-removebg-preview.png" class="icn srchicn" alt="search-icon">
+									<!-- </div> -->
+								</div>
 
 					</div>
 
 		
-					</div>
+				
 				</div>
 			</div>
+
 		</div>
-	</div>
+
+
+
+
     <script>
         <script>
 let menuicn = document.querySelector(".menuicn");

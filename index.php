@@ -67,7 +67,7 @@ if (isset($_POST['login'])){
         
             <h2>Login details</h2>
 
-            <p style="color: red; text-align: center;"> <?PHP if (isset($Error)){ echo $Error;} ?></p>
+            <p style="color: red; text-align: center;"> <?PHP if (isset($Error)){echo $Error;} ?></p>
             
 
             <div class="container">

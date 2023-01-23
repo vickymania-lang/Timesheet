@@ -85,7 +85,7 @@ function filterTable($query)
 	<header>
 
 		<div class="logosec">
-            <img src="image/cctimesheet_logo.png" />
+            <img style="width: 170px;" src="image/cctimesheet_logo.png" />
 		
 		</div>
 
@@ -112,31 +112,31 @@ function filterTable($query)
 	<div class="navcontainer">
 			<nav class="nav">
 				<div class="nav-upper-options">
-					<div class="nav-option option1">
+					<div class="nav-option ">
 						<img src="image/dashboard.png"
 							class="nav-img"
 							alt="dashboard">
 						
-							<a style="text-decoration: none; color: white; position: relative; left: -15px;" href="adminSheet1.html">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px;" href="adminSheet1.html">
 						<h3> Dashboard</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="option2 nav-option">
+					<div style="background-color: white;" class="option2 nav-option">
 						<img src="image/cal.png"
 							class="nav-img"
 							alt="articles">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="dashboard1.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="dashboard1.php">
 						<h3> Time</h3>
 							</a>
 					</div>
 
-					<div style="background-color: green;" class="nav-option option3">
+					<div style="background-color: white;" class="nav-option option3">
 						<img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
 							class="nav-img"
 							alt="report">
-							<a style="text-decoration: none; color: white; position: relative; left: -15px; " href="adminsheetlist.php">
+							<a style="text-decoration: none; color: green; position: relative; left: -15px; " href="adminsheetlist.php">
 						<h3> Admin</h3>
 							</a>
 						
@@ -174,10 +174,11 @@ function filterTable($query)
 
 					<?php while($row = mysqli_fetch_array($search_result)):?>
 							<tr style='text-align: left;'>
-								<td><div class='avatar'><?php echo substr($row['Name'],0,1);?></div></td>
-								<td><?php echo $row['Name'];?></td>
+								<td style="position: relative; right: -15px;" ><div class='avatar'><?php echo substr($row['Name'],0,1);?></div></td>
+								<td style="display:flex;"></div><?php echo $row['Name'];?></td>
 								<td><?php echo $row['Project_Name'];?></td>
-								<td><i class="fa fa-eye fa-lg"></i></td>
+								<td><a href="dashboard1.php"><i class="fa fa-eye fa-lg"></i></a></td>
+								
 
 							</tr>
       			 	 <?php endwhile;?>
